@@ -1,0 +1,37 @@
+# C. elegans neuron selection (sensorimotor circuit)
+# 25 neurons from the chemotaxis-to-motor pathway
+
+SENSORY (8):
+  ASEL  L amphid sensory (chemotaxis)
+  ASER  R amphid sensory (chemotaxis)
+  AWCL  L wing cell (volatile sensing)
+  AWCR  R wing cell (volatile sensing)
+  AFDL  L thermosensory
+  AFDR  R thermosensory
+  ASHL  L nociceptor (avoidance)
+  ASHR  R nociceptor (avoidance)
+
+INTERNEURON (5):
+  AIAL  L amphid interneuron
+  AIAR  R amphid interneuron
+  AIBL  L integration interneuron
+  AIBR  R integration interneuron
+  AIYL  L interneuron Y
+
+COMMAND (4):
+  AVBL  forward command L
+  AVBR  forward command R
+  AVAL  reverse command L
+  AVAR  reverse command R
+
+MOTOR (6):
+  DB1   dorsal B motor 1 (forward)
+  DB2   dorsal B motor 2 (forward)
+  VB1   ventral B motor 1 (forward)
+  VB2   ventral B motor 2 (forward)
+  DA1   dorsal A motor 1 (reverse)
+  VA1   ventral A motor 1 (reverse)
+
+MODULATORY (2):
+  RIML  ring motor L
+  RIMR  ring motor R
