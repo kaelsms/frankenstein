@@ -1,0 +1,30 @@
+# Drosophila neuron selection (mushroom body + central complex)
+# 18 neurons from associative and navigation circuits
+
+KENYON CELLS (5):
+  KC1   alpha lobe
+  KC2   beta lobe
+  KC3   gamma lobe
+  KC4   alpha-prime lobe
+  KC5   beta-prime lobe
+
+MUSHROOM BODY OUTPUT (4):
+  MBON1  MBON-alpha2
+  MBON2  MBON-beta2
+  MBON3  MBON-gamma5
+  MBON4  MBON-calyx
+
+DOPAMINERGIC (3):
+  DAN1  PPL1-alpha3 (aversive)
+  DAN2  PAM-beta2 (appetitive)
+  DAN3  PPL1-gamma2 (aversive)
+
+CENTRAL COMPLEX (4):
+  EPG1  E-PG compass neuron 1
+  EPG2  E-PG compass neuron 2
+  PEN1  P-EN angular velocity
+  PFL1  PFL steering
+
+DESCENDING OUTPUT (2):
+  DN1   descending neuron 1
+  DN2   descending neuron 2
