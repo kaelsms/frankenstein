@@ -1,0 +1,38 @@
+# C. elegans synaptic connections
+# weights from Varshney et al. 2011 adjacency data (scaled x3)
+
+# sensory -> interneuron
+ASEL -> AIAL  3.2  chemical
+ASER -> AIAR  3.0  chemical
+AWCL -> AIAL  2.5  chemical
+AWCR -> AIAR  2.5  chemical
+AFDL -> AIYL  2.0  chemical
+AFDR -> AIYL  1.8  chemical
+ASHL -> AIBL  4.0  chemical
+ASHR -> AIBR  4.0  chemical
+
+# interneuron -> interneuron
+AIAL -> AIBL  2.0  chemical
+AIAR -> AIBR  2.0  chemical
+AIBL -> AVAL  3.5  chemical
+AIBR -> AVAR  3.5  chemical
+AIYL -> AVBL  2.8  chemical
+AIAL -> AVBL  1.5  chemical
+AIAR -> AVBR  1.5  chemical
+
+# gap junctions (electrical, bidirectional)
+AVBL <-> AVBR  2.0  electrical
+AVAL <-> AVAR  2.0  electrical
+AIAL <-> AIAR  1.5  electrical
+
+# command -> motor
+AVBL -> DB1  3.0  chemical
+AVBL -> DB2  2.8  chemical
+AVBR -> VB1  3.0  chemical
+AVBR -> VB2  2.8  chemical
+AVAL -> DA1  3.2  chemical
+AVAR -> VA1  3.2  chemical
+
+# modulatory
+RIML -> AVBL  1.0  chemical
+RIMR -> AVBR  1.0  chemical
