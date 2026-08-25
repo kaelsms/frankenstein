@@ -1,0 +1,32 @@
+# Drosophila synaptic connections
+# from Schlegel et al. 2024 / FlyWire FAFB v783
+
+# KC -> MBON (learned associations)
+KC1 -> MBON1  2.0  chemical
+KC2 -> MBON2  2.0  chemical
+KC3 -> MBON3  2.5  chemical
+KC4 -> MBON1  1.5  chemical
+KC5 -> MBON4  2.0  chemical
+
+# DAN -> KC (dopamine modulation)
+DAN1 -> KC1  -1.5  chemical  (inhibitory)
+DAN2 -> KC3   2.0  chemical  (excitatory)
+DAN3 -> KC5  -1.0  chemical  (inhibitory)
+
+# MBON -> central complex
+MBON1 -> EPG1  2.5  chemical
+MBON2 -> EPG2  2.5  chemical
+MBON3 -> PEN1  2.0  chemical
+MBON4 -> PFL1  3.0  chemical
+
+# central complex ring attractor
+EPG1 -> PEN1  1.8  chemical
+EPG2 -> PEN1  1.5  chemical
+PEN1 -> EPG1  1.2  chemical  (recurrent)
+PEN1 -> PFL1  2.0  chemical
+EPG1 <-> EPG2  1.0  electrical
+
+# output
+PFL1 -> DN1  3.5  chemical
+PFL1 -> DN2  2.5  chemical
+MBON1 -> DN1  1.5  chemical
