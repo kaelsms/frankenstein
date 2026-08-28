@@ -1,0 +1,24 @@
+# bridge layer connections (novel)
+
+# worm sensory -> bridge -> fly learning
+AIAL -> BR_SM  2.0  bridge
+AIAR -> BR_SM  2.0  bridge
+BR_SM -> KC1   2.5  bridge
+BR_SM -> KC2   2.0  bridge
+
+# worm command -> bridge -> fly memory
+AVBL -> BR_CM  1.5  bridge
+AVAL -> BR_CM  1.5  bridge
+BR_CM -> KC3   2.0  bridge
+BR_CM -> DAN2  1.5  bridge
+
+# fly decisions -> bridge -> worm motor
+DN1 -> BR_DM   3.0  bridge
+DN2 -> BR_DM   2.5  bridge
+BR_DM -> AVBL  2.0  bridge  (excitatory, forward)
+BR_DM -> AVAL -1.5  bridge  (inhibitory, suppress reverse)
+
+# fly reward -> bridge -> worm modulation
+DAN2 -> BR_RW  2.0  bridge
+BR_RW -> RIML  1.5  bridge
+BR_RW -> RIMR  1.5  bridge
