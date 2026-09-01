@@ -37,3 +37,15 @@ export function step(neurons: Map<string, Neuron>, synapses: Synapse[], time: nu
     }
   }
 }
+
+export function processSynapses(neurons: Map<string, Neuron>, synapses: Synapse[], time: number) {
+  for (const syn of synapses) {
+    const pre = neurons.get(syn.from)
+    const post = neurons.get(syn.to)
+    if (!pre || !post) continue
+    const timeSinceFire = time - pre.lastFired
+    if (timeSinceFire >= syn.delay && timeSinceFire < syn.delay + DT * 2) {
+      post.potential += syn.weight * 3
+    }
+  }
+}
