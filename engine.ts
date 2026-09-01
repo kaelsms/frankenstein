@@ -1,0 +1,39 @@
+// LIF simulation engine — initial version
+// dV/dt = -(V - V_rest) / tau + I/C
+
+const V_REST = -70
+const V_PEAK = 40
+const TAU = 20
+const DT = 0.5
+
+export interface Neuron {
+  id: string
+  potential: number
+  threshold: number
+  lastFired: number
+  refractory: number
+}
+
+export interface Synapse {
+  from: string
+  to: string
+  weight: number
+  delay: number
+}
+
+export function step(neurons: Map<string, Neuron>, synapses: Synapse[], time: number) {
+  for (const [id, n] of neurons) {
+    const timeSinceFire = time - n.lastFired
+    if (timeSinceFire < n.refractory) continue
+    if (n.potential >= V_PEAK) {
+      n.potential = V_REST + 10
+      continue
+    }
+    n.potential += (-(n.potential - V_REST) / TAU) * DT
+    n.potential += (Math.random() - 0.5) * 0.3
+    if (n.potential >= n.threshold) {
+      n.potential = V_PEAK
+      n.lastFired = time
+    }
+  }
+}
