@@ -49,3 +49,17 @@ export function processSynapses(neurons: Map<string, Neuron>, synapses: Synapse[
     }
   }
 }
+
+export function spontaneous(neurons: Map<string, Neuron>) {
+  const sensory = [...neurons.values()].filter(n => n.threshold === -55)
+  if (sensory.length === 0) return
+  const n = sensory[Math.floor(Math.random() * sensory.length)]
+  n.potential += 15 + Math.random() * 10
+}
+
+export function stimulate(neurons: Map<string, Neuron>, ids: string[], current: number) {
+  for (const id of ids) {
+    const n = neurons.get(id)
+    if (n) n.potential += current
+  }
+}
