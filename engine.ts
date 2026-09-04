@@ -85,3 +85,15 @@ export function trackSpikes(neurons: Map<string, Neuron>, time: number, history:
   }
   return newSpikes
 }
+
+export function updateActivityMap(activity: Map<string, number>, spikes: SpikeEvent[], neurons: Map<string, Neuron>) {
+  // exponential decay
+  for (const [id] of neurons) {
+    const current = activity.get(id) || 0
+    activity.set(id, current * 0.95)
+  }
+  // new spikes
+  for (const spike of spikes) {
+    activity.set(spike.neuronId, 1.0)
+  }
+}
