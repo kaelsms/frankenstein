@@ -63,3 +63,25 @@ export function stimulate(neurons: Map<string, Neuron>, ids: string[], current: 
     if (n) n.potential += current
   }
 }
+
+export interface SpikeEvent {
+  neuronId: string
+  time: number
+}
+
+const SPIKE_HISTORY_WINDOW = 500 // ms
+
+export function trackSpikes(neurons: Map<string, Neuron>, time: number, history: SpikeEvent[]): SpikeEvent[] {
+  const newSpikes: SpikeEvent[] = []
+  for (const [id, n] of neurons) {
+    if (n.potential >= V_PEAK && time - n.lastFired < DT * 2) {
+      newSpikes.push({ neuronId: id, time })
+    }
+  }
+  history.push(...newSpikes)
+  // trim old
+  while (history.length > 0 && history[0].time < time - SPIKE_HISTORY_WINDOW) {
+    history.shift()
+  }
+  return newSpikes
+}
