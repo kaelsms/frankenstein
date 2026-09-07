@@ -1,0 +1,16 @@
+{
+  "version": "0.1.0",
+  "celegans": {
+    "count": 25,
+    "source": "Varshney et al. 2011"
+  },
+  "drosophila": {
+    "count": 18,
+    "source": "Schlegel et al. 2024 (FlyWire)"
+  },
+  "bridge": {
+    "count": 4,
+    "source": "novel (this work)"
+  },
+  "total": 47
+}

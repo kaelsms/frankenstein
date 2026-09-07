@@ -1,0 +1,35 @@
+{
+  "simulation": {
+    "dt_ms": 0.5,
+    "steps_per_frame": 4,
+    "V_rest_mV": -70,
+    "V_peak_mV": 40,
+    "tau_ms": 20,
+    "noise_sigma_mV": 0.3
+  },
+  "delays_ms": {
+    "worm": 2,
+    "fly": 3,
+    "bridge": 5,
+    "electrical": 0.5
+  },
+  "stimulus_pathways": {
+    "chemotaxis": [
+      "ASEL",
+      "ASER",
+      "AWCL",
+      "AWCR"
+    ],
+    "nociception": [
+      "ASHL",
+      "ASHR"
+    ],
+    "thermal": [
+      "AFDL",
+      "AFDR"
+    ],
+    "reward": [
+      "DAN2"
+    ]
+  }
+}
