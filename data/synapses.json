@@ -1,0 +1,13 @@
+{
+  "worm_chemical": 21,
+  "worm_electrical": 3,
+  "fly_chemical": 18,
+  "fly_electrical": 1,
+  "bridge": 15,
+  "total": 48,
+  "sources": [
+    "Varshney et al. 2011",
+    "Schlegel et al. 2024",
+    "this work"
+  ]
+}
