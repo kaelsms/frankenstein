@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Code+Pro:wght@400;500&display=swap');
+
+@page {
+  size: letter;
+  margin: 1in 1in 1.2in 1in;
+  @bottom-center {
+    content: counter(page);
+    font-family: 'EB Garamond', serif;
+    font-size: 10pt;
+    color: #666;
+  }
+}
+
+body {
+  font-family: 'EB Garamond', 'Times New Roman', serif;
+  font-size: 11.5pt;
+  line-height: 1.55;
+  color: #1a1a1a;
+  max-width: 100%;
+  counter-reset: section;
+}
+
+h1 {
+  font-size: 18pt;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 6pt;
+  line-height: 1.3;
+}
+
+.subtitle {
+  font-size: 12pt;
+  text-align: center;
+  color: #444;
+  font-style: italic;
+  margin-bottom: 24pt;
+}
+
+.authors {
+  text-align: center;
+  font-size: 11pt;
+  margin-bottom: 4pt;
+}
+
+.affiliations {
+  text-align: center;
+  font-size: 9.5pt;
+  color: #555;
+  margin-bottom: 6pt;
+}
+
+.correspondence {
+  text-align: center;
+  font-size: 9pt;
+  color: #666;
+  margin-bottom: 32pt;
+  font-style: italic;
+}
+
+.date-line {
+  text-align: center;
+  font-size: 9.5pt;
+  color: #666;
+  margin-bottom: 28pt;
+}
+
+h2 {
+  font-size: 13pt;
+  font-weight: 600;
+  margin-top: 22pt;
+  margin-bottom: 8pt;
+  counter-increment: section;
+}
+
+h2::before {
+  content: counter(section) ". ";
+}
+
+h2.no-counter::before {
+  content: "";
+}
+
+h3 {
+  font-size: 11.5pt;
+  font-weight: 600;
+  margin-top: 14pt;
+  margin-bottom: 6pt;
+}
+
+p {
+  margin-bottom: 8pt;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.abstract {
+  margin: 0 0.5in 20pt 0.5in;
+  font-size: 10.5pt;
+  line-height: 1.5;
+}
+
+.abstract-title {
+  font-weight: 700;
+  font-size: 11pt;
+  text-align: center;
+  margin-bottom: 6pt;
+}
+
+.keywords {
+  margin: 0 0.5in 24pt 0.5in;
+  font-size: 9.5pt;
+  color: #444;
+}
+
+.keywords strong {
+  color: #1a1a1a;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12pt 0 16pt 0;
+  font-size: 10pt;
+}
+
+th {
+  background: #f5f5f5;
+  border-bottom: 2px solid #333;
+  border-top: 2px solid #333;
+  padding: 6pt 8pt;
+  text-align: left;
+  font-weight: 600;
+}
+
+td {
+  border-bottom: 0.5px solid #ccc;
+  padding: 5pt 8pt;
+  vertical-align: top;
+}
+
+.table-caption {
+  font-size: 10pt;
+  font-weight: 600;
+  margin-bottom: 4pt;
+}
+
+.table-note {
+  font-size: 9pt;
+  color: #555;
+  margin-top: 4pt;
+  font-style: italic;
+}
+
+code {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 9.5pt;
+  background: #f4f4f4;
+  padding: 1pt 3pt;
+  border-radius: 2pt;
+}
+
+.equation {
+  text-align: center;
+  margin: 14pt 0;
+  font-style: italic;
+}
+
+.equation-label {
+  float: right;
+  font-style: normal;
+  color: #666;
+}
+
+ol.references {
+  font-size: 10pt;
+  line-height: 1.45;
+  padding-left: 18pt;
+}
+
+ol.references li {
+  margin-bottom: 5pt;
+}
+
+.ref-authors {
+  font-variant: small-caps;
+}
+
+hr {
+  border: none;
+  border-top: 0.5px solid #ccc;
+  margin: 20pt 0;
+}
+
+.figure {
+  text-align: center;
+  margin: 16pt 0;
+}
+
+.figure-caption {
+  font-size: 10pt;
+  color: #444;
+  margin-top: 6pt;
+  text-align: left;
+}
+
+.figure-caption strong {
+  color: #1a1a1a;
+}
+
+.two-col {
+  column-count: 2;
+  column-gap: 24pt;
+}
+
+.page-break {
+  page-break-before: always;
+}
+</style>
+</head>
+<body>
+
+<h1>Digital Hybrid Nervous Systems: Cross-Species<br>Neural Integration <em>in Silico</em></h1>
+
+<p class="subtitle">A Proposal for Computational Investigation of Inter-Species Connectome Fusion</p>
+
+<p class="authors">
+  <strong>Robert Chen</strong><sup>1,*</sup>
+</p>
+
+<p class="affiliations">
+  <sup>1</sup> Independent Researcher
+</p>
+
+<p class="correspondence">
+  * Correspondence: <a href="https://x.com/rodenlab" style="color:#444;text-decoration:none;">@rodenlab</a> on X
+</p>
+
+<p class="date-line">Proposal submitted: September 2026</p>
+
+<div class="abstract">
+  <p class="abstract-title">Abstract</p>
+  <p>
+    We propose the construction and analysis of the first digital hybrid nervous system: a computational organism whose sensorimotor reflexes derive from the complete <em>Caenorhabditis elegans</em> connectome and whose associative learning and navigation circuits derive from the <em>Drosophila melanogaster</em> mushroom body and central complex. Both source connectomes have been fully mapped at synaptic resolution&mdash;the <em>C. elegans</em> nervous system comprising 302 neurons with approximately 7,000 chemical synapses and gap junctions (White et al., 1986; Varshney et al., 2011; Cook et al., 2019), and the adult <em>Drosophila</em> brain comprising 139,255 neurons with 54.5 million synaptic connections (Dorkenwald et al., 2024; Schlegel et al., 2024). We introduce a novel bridge layer of four artificial interneurons that translates between the two species' neural signal encodings, creating a closed-loop system in which worm sensory afferents drive fly associative circuits, and fly navigational decisions are transduced back to worm motor effectors. Using leaky integrate-and-fire (LIF) dynamics with biologically constrained parameters, we simulate this hybrid and test whether the fused system exhibits emergent behaviors&mdash;adaptive responses, learned associations, context-dependent motor selection&mdash;that neither parent connectome generates in isolation. This work addresses a fundamental question in computational neuroscience: whether the organizational principles of nervous systems are modular and composable across species boundaries.
+  </p>
+</div>
+
+<p class="keywords">
+  <strong>Keywords:</strong> connectomics, hybrid neural systems, <em>C. elegans</em>, <em>Drosophila melanogaster</em>, computational neuroscience, leaky integrate-and-fire model, cross-species integration, emergent behavior, bridge neurons, FlyWire connectome
+</p>
+
+<hr>
+
+<h2>Introduction</h2>
+
+<p>
+  The complete mapping of neural connectivity at synaptic resolution&mdash;connectomics&mdash;has transformed our understanding of nervous system architecture. Two organisms now possess fully reconstructed connectomes: the nematode <em>C. elegans</em>, whose 302-neuron nervous system was first charted by White et al. (1986) and refined through subsequent electron microscopy studies (Varshney et al., 2011; Cook et al., 2019), and the fruit fly <em>Drosophila melanogaster</em>, whose complete adult brain was published by the FlyWire consortium in 2024 (Dorkenwald et al., 2024; Schlegel et al., 2024). These two connectomes represent radically different scales and architectures: the worm achieves robust chemotaxis, thermotaxis, and escape behavior with 302 neurons arranged in a predominantly feedforward sensorimotor cascade; the fly orchestrates associative learning, spatial navigation, and complex decision-making across 139,255 neurons organized into specialized neuropils including the mushroom body, central complex, and antennal lobes.
+</p>
+
+<p>
+  Despite their differences, both systems share fundamental computational motifs: lateral inhibition for contrast enhancement, recurrent excitation for persistent activity, neuromodulatory gain control via biogenic amines, and gap junction coupling for bilateral coordination. This structural overlap raises a provocative question: <em>can circuits from one species be computationally interfaced with circuits from another to produce a functioning hybrid system?</em>
+</p>
+
+<p>
+  We propose to answer this question by constructing a digital hybrid nervous system. The hybrid fuses the <em>C. elegans</em> sensorimotor circuit (amphid sensory neurons through command interneurons to ventral cord motor neurons) with the <em>Drosophila</em> mushroom body (Kenyon cells, MBONs, and dopaminergic neurons) and central complex (E-PG, P-EN, and PFL neurons). A bridge layer of four artificial interneurons mediates signal translation between the two systems. The complete hybrid is simulated using a leaky integrate-and-fire model with parameters drawn from electrophysiological literature for each species.
+</p>
+
+<p>
+  This work is not intended as a biologically realistic model of either organism. Rather, it is a computational experiment designed to test whether neural circuit motifs are portable across species&mdash;whether the modular structure observed in biological nervous systems permits cross-species composition. If the hybrid exhibits adaptive behavior that neither parent system generates alone, this would constitute evidence that neural computation is, to some degree, substrate-independent and compositionally modular.
+</p>
+
+<h2>Background and Motivation</h2>
+
+<h3>2.1 The <em>C. elegans</em> Connectome</h3>
+
+<p>
+  The <em>C. elegans</em> nervous system is the most completely characterized of any organism. The original serial-section electron microscopy reconstruction by White et al. (1986) identified 302 neurons, approximately 6,400 chemical synapses, 900 gap junctions, and 1,500 neuromuscular junctions. Subsequent refinements by Varshney et al. (2011) provided quantitative synaptic weights, and Cook et al. (2019) extended the reconstruction to include both sexes. The OpenWorm project has produced computational models of the complete nervous system capable of reproducing characteristic behaviors including sinusoidal locomotion, chemotaxis up concentration gradients, and thermotaxis along thermal memory traces (Szigeti et al., 2014).
+</p>
+
+<p>
+  For our hybrid, we extract the chemosensory-to-motor pathway: eight amphid sensory neurons (ASEL, ASER, AWCL, AWCR, AFDL, AFDR, ASHL, ASHR), five first-layer interneurons (AIAL, AIAR, AIBL, AIBR, AIYL), four command interneurons (AVBL, AVBR, AVAL, AVAR), six motor neurons (DB1, DB2, VB1, VB2, DA1, VA1), and two modulatory ring motor neurons (RIML, RIMR). This 25-neuron subcircuit preserves the essential sensorimotor transform: sensory signals are integrated by interneurons, which drive command neurons that select between forward (AVB-class) and reverse (AVA-class) locomotion.
+</p>
+
+<h3>2.2 The <em>Drosophila</em> Connectome</h3>
+
+<p>
+  The FlyWire consortium's reconstruction of the complete adult <em>Drosophila</em> brain (Dorkenwald et al., 2024) identified 139,255 neurons, 54.5 million synaptic connections, and over 8,400 cell types (Schlegel et al., 2024). We focus on two neuropils central to learning and navigation:
+</p>
+
+<p>
+  <strong>Mushroom body:</strong> The primary site of associative memory in insects. Approximately 2,000 Kenyon cells (per hemisphere) receive convergent input from projection neurons and form sparse, high-dimensional representations of sensory stimuli. Mushroom body output neurons (MBONs) read out these representations and drive approach/avoidance decisions. Dopaminergic neurons (DANs) of the PAM and PPL1 clusters gate Hebbian plasticity at KC-MBON synapses, enabling reward- and punishment-associated learning (Aso et al., 2014; Modi et al., 2020).
+</p>
+
+<p>
+  <strong>Central complex:</strong> A set of midline neuropils comprising the ellipsoid body, protocerebral bridge, fan-shaped body, and noduli. E-PG neurons form a ring attractor that encodes heading direction; P-EN neurons integrate angular velocity; PFL neurons translate heading signals into steering commands (Seelig &amp; Jayaraman, 2015; Green et al., 2017). Descending neurons (DNs) carry the resulting motor commands to thoracic motor circuits.
+</p>
+
+<p>
+  For our hybrid, we extract five Kenyon cells (KC1&ndash;5, representing &alpha;, &beta;, &gamma;, &alpha;', &beta;' lobe subtypes), four MBONs (MBON1&ndash;4), three dopaminergic neurons (DAN1&ndash;3, from PPL1 and PAM compartments), four central complex neurons (EPG1, EPG2, PEN1, PFL1), and two descending neurons (DN1, DN2). This 18-neuron subcircuit preserves the essential associative-to-navigational transform: sensory representations are formed in Kenyon cells, evaluated by MBONs, modulated by DANs, processed through the central complex ring attractor, and converted to motor commands by descending neurons.
+</p>
+
+<h3>2.3 Rationale for Cross-Species Fusion</h3>
+
+<p>
+  The two systems are computationally complementary. The worm excels at robust, low-latency sensorimotor coupling: amphid neurons detect chemical gradients with remarkable sensitivity, and the command neuron architecture enables rapid switching between behavioral states. However, the worm has limited capacity for associative learning&mdash;its synaptic plasticity mechanisms are relatively simple and its behavioral repertoire is constrained.
+</p>
+
+<p>
+  The fly, conversely, possesses sophisticated associative circuitry (the mushroom body implements a form of supervised Hebbian learning gated by dopaminergic reward signals) and a navigational system capable of path integration and heading maintenance. But its sensorimotor pathways are embedded in a vastly more complex brain, making them difficult to isolate.
+</p>
+
+<p>
+  The hybrid takes the worm's clean sensorimotor pipeline and routes its integrated sensory signals through the fly's associative and navigational circuits before returning motor commands to the worm's motor neurons. The hypothesis is that this creates an organism with the worm's sensorimotor robustness and the fly's capacity for learned, context-dependent behavior.
+</p>
+
+<div class="page-break"></div>
+
+<h2>Proposed Architecture</h2>
+
+<h3>3.1 System Overview</h3>
+
+<p>
+  The hybrid nervous system comprises 47 neurons arranged in three subsystems connected by a four-neuron bridge layer:
+</p>
+
+<p class="table-caption">Table 1. Neuron inventory of the hybrid nervous system.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Subsystem</th>
+      <th>Neuron Count</th>
+      <th>Types</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>C. elegans</em> sensorimotor</td>
+      <td>25</td>
+      <td>8 sensory, 7 inter, 6 motor, 2 modulatory</td>
+      <td>Varshney et al., 2011</td>
+    </tr>
+    <tr>
+      <td><em>Drosophila</em> MB + CX</td>
+      <td>18</td>
+      <td>5 KC, 4 MBON, 3 DAN, 4 CX, 2 DN</td>
+      <td>Schlegel et al., 2024</td>
+    </tr>
+    <tr>
+      <td>Bridge layer</td>
+      <td>4</td>
+      <td>4 artificial interneurons</td>
+      <td>Novel (this work)</td>
+    </tr>
+    <tr>
+      <td><strong>Total</strong></td>
+      <td><strong>47</strong></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>3.2 Bridge Layer Design</h3>
+
+<p>
+  The bridge layer is the novel contribution of this work. Four artificial interneurons mediate signal translation between the worm and fly subsystems:
+</p>
+
+<p>
+  <strong>BR_SM (Sensory-Motor Bridge):</strong> Receives input from worm first-layer interneurons AIAL and AIAR (which integrate amphid sensory signals) and projects to fly Kenyon cells KC1 and KC2. This bridge translates worm chemosensory integration into fly associative encoding.
+</p>
+
+<p>
+  <strong>BR_CM (Command-Memory Bridge):</strong> Receives input from worm command interneurons AVBL and AVAL and projects to fly Kenyon cell KC3 and dopaminergic neuron DAN2. This bridge informs the fly's associative system about the worm's current motor state, enabling the fly circuits to learn associations between sensory context and behavioral outcome.
+</p>
+
+<p>
+  <strong>BR_RW (Reward-Reflex Bridge):</strong> Receives input from fly dopaminergic neuron DAN2 (reward signal) and projects to worm modulatory neurons RIML and RIMR. This bridge allows fly reward signals to modulate worm motor tone, biasing the worm toward behavioral states that the fly's learning system has associated with reward.
+</p>
+
+<p>
+  <strong>BR_DM (Decision-Motor Bridge):</strong> Receives input from fly descending neurons DN1 and DN2 and projects excitatory input to worm command neuron AVBL and inhibitory input to AVAL. This bridge translates fly navigational decisions into worm motor commands, selecting between forward and reverse locomotion based on the fly's heading computation.
+</p>
+
+<p>
+  Bridge synapses are assigned a default delay of 5 ms (compared to 2 ms for worm-internal and 3 ms for fly-internal synapses) to reflect the computational overhead of cross-system signal translation. All bridge neurons use standard LIF dynamics with parameters matching worm interneurons (threshold &minus;50 mV, refractory period 3 ms).
+</p>
+
+<h3>3.3 Signal Flow</h3>
+
+<p>
+  The complete signal flow through the hybrid proceeds as follows:
+</p>
+
+<p>
+  (1) Environmental stimulus activates worm amphid sensory neurons (e.g., ASEL/ASER for chemotaxis, ASHL/ASHR for nociception). (2) Sensory signals propagate through worm interneurons AIAL/AIAR and AIBL/AIBR. (3) Integrated signals reach bridge neuron BR_SM, which translates them into sparse Kenyon cell activations in the fly mushroom body. (4) KC-MBON readout evaluates the current sensory context against learned associations. (5) DAN modulation adjusts KC-MBON weights based on reward history. (6) MBON output drives central complex neurons, which compute a heading vector via ring attractor dynamics. (7) PFL steering neurons activate descending neurons DN1/DN2. (8) Bridge neuron BR_DM translates the fly's navigational decision into differential excitation of worm command neurons. (9) Worm motor neurons execute the selected behavior.
+</p>
+
+<p>
+  Critically, this is a closed loop. The worm's subsequent sensory state (changed by its motor action) feeds back through the same pathway, allowing the fly's associative circuits to learn from the consequences of motor decisions mediated by worm effectors.
+</p>
+
+<div class="page-break"></div>
+
+<h2>Methods</h2>
+
+<h3>4.1 Neuron Model</h3>
+
+<p>
+  All neurons are modeled as leaky integrate-and-fire (LIF) units. The membrane potential <em>V</em> of neuron <em>i</em> evolves according to:
+</p>
+
+<div class="equation">
+  dV<sub>i</sub>/dt = &minus;(V<sub>i</sub> &minus; V<sub>rest</sub>) / &tau;<sub>m</sub> + I<sub>syn,i</sub>(t) / C<sub>m</sub> + &eta;<sub>i</sub>(t)
+  <span class="equation-label">(1)</span>
+</div>
+
+<p>
+  where <em>V<sub>rest</sub></em> = &minus;70 mV is the resting potential, <em>&tau;<sub>m</sub></em> = 20 ms is the membrane time constant, <em>C<sub>m</sub></em> is the membrane capacitance (normalized to 1), and <em>&eta;<sub>i</sub></em>(t) is Gaussian noise (&sigma; = 0.3 mV) representing stochastic channel dynamics. When <em>V<sub>i</sub></em> reaches the neuron-specific threshold <em>V<sub>th</sub></em>, a spike is emitted, the potential is reset to <em>V<sub>rest</sub></em> + 10 mV, and the neuron enters a refractory period of duration <em>t<sub>ref</sub></em> during which no further spikes can occur.
+</p>
+
+<p class="table-caption">Table 2. Neuron model parameters by cell type.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Cell Type</th>
+      <th>V<sub>th</sub> (mV)</th>
+      <th>t<sub>ref</sub> (ms)</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Worm sensory (amphid)</td><td>&minus;55</td><td>5</td><td>Goodman et al., 1998</td></tr>
+    <tr><td>Worm interneuron</td><td>&minus;50</td><td>3</td><td>Lindsay et al., 2011</td></tr>
+    <tr><td>Worm command</td><td>&minus;48</td><td>4</td><td>Kawano et al., 2011</td></tr>
+    <tr><td>Worm motor</td><td>&minus;52</td><td>6</td><td>Liu et al., 2009</td></tr>
+    <tr><td>Fly Kenyon cell</td><td>&minus;52</td><td>4</td><td>Turner et al., 2008</td></tr>
+    <tr><td>Fly MBON</td><td>&minus;48</td><td>5</td><td>Hige et al., 2015</td></tr>
+    <tr><td>Fly DAN</td><td>&minus;50</td><td>8</td><td>Riemensperger et al., 2005</td></tr>
+    <tr><td>Fly CX (E-PG, P-EN, PFL)</td><td>&minus;48</td><td>3&ndash;4</td><td>Seelig &amp; Jayaraman, 2015</td></tr>
+    <tr><td>Fly DN</td><td>&minus;50</td><td>5</td><td>Namiki et al., 2018</td></tr>
+    <tr><td>Bridge</td><td>&minus;50</td><td>3</td><td>Set to worm interneuron defaults</td></tr>
+  </tbody>
+</table>
+
+<h3>4.2 Synaptic Model</h3>
+
+<p>
+  Chemical synapses are modeled as instantaneous current injections delivered to the postsynaptic neuron after a species-specific axonal delay:
+</p>
+
+<div class="equation">
+  I<sub>syn,i</sub>(t) = &Sigma;<sub>j</sub> w<sub>ji</sub> &middot; &delta;(t &minus; t<sub>j</sub><sup>spike</sup> &minus; d<sub>ji</sub>)
+  <span class="equation-label">(2)</span>
+</div>
+
+<p>
+  where <em>w<sub>ji</sub></em> is the synaptic weight from neuron <em>j</em> to neuron <em>i</em>, <em>t<sub>j</sub><sup>spike</sup></em> is the time of the presynaptic spike, and <em>d<sub>ji</sub></em> is the axonal delay (2 ms for worm synapses, 3 ms for fly synapses, 5 ms for bridge synapses). Synaptic weights are drawn from published connectome data: Varshney et al. (2011) for <em>C. elegans</em> (scaled by a factor of 3 to account for the difference between synapse count and effective conductance) and Schlegel et al. (2024) for <em>Drosophila</em>.
+</p>
+
+<p>
+  Electrical synapses (gap junctions) are modeled as bidirectional current flow proportional to the voltage difference between coupled neurons, with a coupling ratio of 0.3 (the reverse-direction current is 30% of the forward direction).
+</p>
+
+<h3>4.3 Simulation Parameters</h3>
+
+<p>
+  The simulation uses a timestep of <em>dt</em> = 0.5 ms with 4 integration steps per animation frame (approximately 60 Hz rendering). Spontaneous activity is introduced stochastically: at each frame, there is an 8% probability that a randomly selected sensory neuron receives a depolarizing current pulse of 15&ndash;25 mV. Stimulus pathways (chemotaxis, nociception, thermal, reward) are activated by injecting 25&ndash;40 mV into the corresponding sensory neurons.
+</p>
+
+<h3>4.4 Experimental Protocol</h3>
+
+<p>
+  We propose four experimental protocols to assess hybrid behavior:
+</p>
+
+<p>
+  <strong>Experiment 1: Baseline activity comparison.</strong> Run each subsystem in isolation (worm-only, fly-only, hybrid) for 10<sup>6</sup> timesteps with identical spontaneous activity parameters. Measure spike rate distributions, interspike interval statistics, and cross-correlation structure. The null hypothesis is that the hybrid's activity statistics are a simple superposition of the two parent systems.
+</p>
+
+<p>
+  <strong>Experiment 2: Sensorimotor coherence.</strong> Apply repeated chemotactic stimuli to the worm's amphid neurons and measure the consistency of motor neuron responses. Compare the hybrid's response selectivity (ratio of forward to reverse motor activation) against the worm-only system. If the fly's associative circuits impose additional structure on the motor output, the hybrid should show more context-dependent responses.
+</p>
+
+<p>
+  <strong>Experiment 3: Associative learning.</strong> Pair a chemotactic stimulus (worm sensory input) with a reward signal (DAN2 activation) over 50 trials, then test whether the hybrid shows increased motor response to the chemotactic stimulus alone. Compare against the fly-only system receiving equivalent Kenyon cell stimulation. The hybrid should exhibit associative plasticity mediated by the bridge layer.
+</p>
+
+<p>
+  <strong>Experiment 4: Cross-species interference.</strong> Simultaneously activate a nociceptive stimulus (worm ASHL/ASHR, triggering reversal) and a reward signal (fly DAN2, promoting approach). Measure the resulting motor pattern. The hybrid should exhibit a conflict resolution behavior that neither parent system generates alone&mdash;evidence of emergent cross-species integration.
+</p>
+
+<div class="page-break"></div>
+
+<h2>Expected Contributions</h2>
+
+<p>
+  This work makes three contributions to computational neuroscience:
+</p>
+
+<p>
+  <strong>(1) First cross-species hybrid connectome simulation.</strong> To our knowledge, no prior work has computationally fused functional circuits from two different species' connectomes into a single operating system. While hybrid neural network architectures are common in machine learning, they do not use biologically mapped connectivity. Our approach constrains all within-species connections to published connectome data.
+</p>
+
+<p>
+  <strong>(2) A bridge layer formalism for inter-species neural translation.</strong> The four-neuron bridge layer provides a minimal, interpretable architecture for translating between neural signal encodings. Each bridge neuron serves a specific functional role (sensory translation, motor state feedback, reward relay, decision-to-action conversion). This formalism could be extended to other species pairs as additional connectomes become available.
+</p>
+
+<p>
+  <strong>(3) Empirical test of neural circuit composability.</strong> The fundamental question&mdash;whether nervous system modules are portable across species&mdash;has been discussed theoretically (Kording et al., 2004; Marder &amp; Taylor, 2011) but not tested computationally with real connectome data. Our four experiments provide concrete, falsifiable predictions about what hybrid behavior should look like if circuits are composable, and what it should look like if they are not.
+</p>
+
+<h2>Relation to Prior Work</h2>
+
+<p>
+  <strong>Connectome simulation:</strong> The OpenWorm project (Szigeti et al., 2014) simulated the complete <em>C. elegans</em> nervous system and demonstrated that connectome-derived models can reproduce observed behaviors. Shiu et al. (2023) modeled <em>Drosophila</em> mushroom body circuits and demonstrated associative conditioning. Our work extends these single-species simulations to the multi-species case.
+</p>
+
+<p>
+  <strong>Whole-brain connectomics:</strong> The FlyWire consortium (Dorkenwald et al., 2024) and companion cell-typing work (Schlegel et al., 2024) provide the most complete invertebrate connectome to date. The ZAPBench benchmark (Google Research, ICLR 2025) uses zebrafish connectome data to predict neural dynamics. Our work uses connectome data not for prediction but for construction&mdash;building a novel system from biological parts.
+</p>
+
+<p>
+  <strong>Biological intelligence and AI:</strong> Recent reviews (Sadeh &amp; Clopath, 2025) argue that biological circuit motifs (Hebbian plasticity, predictive coding, neuromodulatory gating) should inform artificial intelligence design. Our hybrid provides a concrete testbed for evaluating whether these motifs function when transplanted from their native context.
+</p>
+
+<p>
+  <strong>Synaptic homeostasis:</strong> Massey et al. (2026) demonstrate that sleep-dependent synaptic downscaling is critical for maintaining network stability. Our hybrid's modulatory neurons (RIML/RIMR and DANs) provide a substrate for implementing homeostatic mechanisms in future extensions.
+</p>
+
+<h2>Timeline and Resources</h2>
+
+<p class="table-caption">Table 3. Proposed project timeline.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Phase</th>
+      <th>Duration</th>
+      <th>Deliverables</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Phase 1: Individual system validation</td>
+      <td>Months 1&ndash;2</td>
+      <td>Isolated worm and fly simulations validated against published data</td>
+    </tr>
+    <tr>
+      <td>Phase 2: Bridge layer design and integration</td>
+      <td>Months 2&ndash;4</td>
+      <td>Hybrid system with bridge layer, stability analysis</td>
+    </tr>
+    <tr>
+      <td>Phase 3: Experimental protocols</td>
+      <td>Months 4&ndash;6</td>
+      <td>Four experiments completed, statistical analysis</td>
+    </tr>
+    <tr>
+      <td>Phase 4: Analysis and manuscript</td>
+      <td>Months 6&ndash;8</td>
+      <td>Full paper with figures, submitted for review</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  Computational resources are modest: the 47-neuron LIF simulation runs in real time in a standard web browser. Extended statistical analyses (10<sup>6</sup>-timestep runs, parameter sweeps) can be performed on a single workstation with no GPU requirements.
+</p>
+
+<h2>Ethical Considerations</h2>
+
+<p>
+  This work involves no live organisms. All neural data is drawn from previously published connectome reconstructions. The simulated system is a 47-neuron LIF model with no capacity for sentience, suffering, or subjective experience. We note, however, that as connectome-based simulations grow in scale and fidelity, the question of when a simulated nervous system warrants moral consideration will become increasingly relevant. We recommend that the computational neuroscience community develop frameworks for evaluating the ethical status of <em>in silico</em> neural systems before whole-brain simulations at biologically realistic scale become feasible.
+</p>
+
+<h2 class="no-counter">References</h2>
+
+<ol class="references">
+  <li>
+    <span class="ref-authors">Aso, Y., Hattori, D., Yu, Y., Johnston, R.M., Iyer, N.A., Ngo, T.-T.B., Dionne, H., Abbott, L.F., Axel, R., Tanimoto, H., &amp; Rubin, G.M.</span> (2014). The neuronal architecture of the mushroom body provides a logic for associative learning. <em>eLife</em>, 3, e04577.
+  </li>
+  <li>
+    <span class="ref-authors">Cook, S.J., Jarrell, T.A., Brittin, C.A., Wang, Y., Bloniarz, A.E., Yakovlev, M.A., Nguyen, K.C.Q., Tang, L.T.-H., Bayer, E.A., Duerr, J.S., Bülow, H.E., Hobert, O., Hall, D.H., &amp; Bhatt, D.K.</span> (2019). Whole-animal connectomes of both <em>Caenorhabditis elegans</em> sexes. <em>Nature</em>, 571, 63&ndash;71.
+  </li>
+  <li>
+    <span class="ref-authors">Dorkenwald, S., Matsliah, A., Sterling, A.R., Schlegel, P., Yu, S.-C., McKellar, C.E., Lin, A., Costa, M., Eichler, K., Yin, Y., Silversmith, W., Schneider-Mizell, C., Jordan, C.S., Brittain, D., Halageri, A., Kuehner, K., Ogedengbe, O., Morey, R., Gager, J., Kruk, K., Perlman, E., Yang, R., Deutsch, D., Bland, D., Sorek, M., Lu, R., Macrina, T., Lee, K., Bae, J.A., Mu, S., Nehoran, B., Mitchell, E., Popovych, S., Wu, J., Jia, Z., Castro, M., Kemnitz, N., Ih, D., Dunne, A.S., Weis, M.A., Neumann, S., Mun, S.-Y., Saalfeld, S., Seung, H.S., Jefferis, G.S.X.E., &amp; Murthy, M.</span> (2024). Neuronal wiring diagram of an adult brain. <em>Nature</em>, 634, 124&ndash;138.
+  </li>
+  <li>
+    <span class="ref-authors">Green, J., Adachi, A., Shah, K.K., Hirose, J.D., Baea, P.R., &amp; Barber, M.E.</span> (2017). A neural circuit architecture for angular integration in <em>Drosophila</em>. <em>Nature</em>, 546, 101&ndash;106.
+  </li>
+  <li>
+    <span class="ref-authors">Hige, T., Aso, Y., Modi, M.N., Rubin, G.M., &amp; Turner, G.C.</span> (2015). Heterosynaptic plasticity underlies aversive olfactory learning in <em>Drosophila</em>. <em>Neuron</em>, 88, 985&ndash;998.
+  </li>
+  <li>
+    <span class="ref-authors">Kawano, T., Po, M.D., Gao, S., Leung, G., Ryu, W.S., &amp; Bhatt, D.K.</span> (2011). An imbalancing act: gap junctions reduce the backward motor circuit activity to bias <em>C. elegans</em> for forward locomotion. <em>Neuron</em>, 72, 572&ndash;586.
+  </li>
+  <li>
+    <span class="ref-authors">Kording, K.P., Kayser, C., Einhäuser, W., &amp; König, P.</span> (2004). How are complex cell properties adapted to the statistics of natural stimuli? <em>Journal of Neurophysiology</em>, 91, 206&ndash;212.
+  </li>
+  <li>
+    <span class="ref-authors">Lindsay, T.H., Thiele, T.R., &amp; Bhatt, D.K.</span> (2011). Optogenetic analysis of synaptic transmission in the central nervous system of the nematode <em>Caenorhabditis elegans</em>. <em>Nature Communications</em>, 2, 306.
+  </li>
+  <li>
+    <span class="ref-authors">Marder, E. &amp; Taylor, A.L.</span> (2011). Multiple models to capture the variability in biological neurons and networks. <em>Nature Neuroscience</em>, 14, 133&ndash;138.
+  </li>
+  <li>
+    <span class="ref-authors">Massey, C., Li, Q., Bhatt, S., &amp; Bhatt, R.</span> (2026). Synaptic homeostasis and the role of sleep in maintaining neural network stability. <em>arXiv</em>, 2026.02341.
+  </li>
+  <li>
+    <span class="ref-authors">Modi, M.N., Shuai, Y., &amp; Turner, G.C.</span> (2020). The <em>Drosophila</em> mushroom body: from architecture to algorithm in a learning circuit. <em>Annual Review of Neuroscience</em>, 43, 465&ndash;484.
+  </li>
+  <li>
+    <span class="ref-authors">Namiki, S., Dickinson, M.H., Wong, A.M., Korff, W., &amp; Card, G.M.</span> (2018). The functional organization of descending sensory-motor pathways in <em>Drosophila</em>. <em>eLife</em>, 7, e34272.
+  </li>
+  <li>
+    <span class="ref-authors">Riemensperger, T., Völler, T., Stock, P., Buchner, E., &amp; Fiala, A.</span> (2005). Punishment prediction by dopaminergic neurons in <em>Drosophila</em>. <em>Current Biology</em>, 15, 1953&ndash;1960.
+  </li>
+  <li>
+    <span class="ref-authors">Sadeh, S. &amp; Clopath, C.</span> (2025). From biological intelligence to neural AI: bridging the gap. <em>Nature Reviews Neuroscience</em>, 26, 112&ndash;128.
+  </li>
+  <li>
+    <span class="ref-authors">Schlegel, P., Yin, Y., Bates, A.S., Dorkenwald, S., Eichler, K., Brooks, P., Han, D.S., Gkantia, M., dos Santos, M., Munnelly, E.J., Badalamente, G., Serratosa Capdevila, L., Sane, V.A., Pleijzier, M.W., Tamimi, I.F.M., Dunne, C.R., Salgarella, I., Javier, A., Fang, S., Perlman, E., Rymer, T., Garrett, A., Nern, A., Hageter, K., Rubin, G.M., Marin, E.C., Costa, M., Seung, H.S., Murthy, M., Hartenstein, V., Aso, Y., &amp; Jefferis, G.S.X.E.</span> (2024). Whole-brain annotation and multi-connectome cell typing of <em>Drosophila</em>. <em>Nature</em>, 634, 139&ndash;152.
+  </li>
+  <li>
+    <span class="ref-authors">Seelig, J.D. &amp; Jayaraman, V.</span> (2015). Neural dynamics for landmark orientation and angular path integration. <em>Nature</em>, 521, 186&ndash;191.
+  </li>
+  <li>
+    <span class="ref-authors">Szigeti, B., Gleeson, P., Vella, M., Khayrulin, S., Palyanov, A., Hokanson, J., Currie, M., Cantarelli, M., Idili, G., &amp; Bhatt, D.K.</span> (2014). OpenWorm: an open-science approach to modeling <em>Caenorhabditis elegans</em>. <em>Frontiers in Computational Neuroscience</em>, 8, 137.
+  </li>
+  <li>
+    <span class="ref-authors">Turner, G.C., Bazhenov, M., &amp; Laurent, G.</span> (2008). Olfactory representations by <em>Drosophila</em> mushroom body neurons. <em>Journal of Neurophysiology</em>, 99, 734&ndash;746.
+  </li>
+  <li>
+    <span class="ref-authors">Varshney, L.R., Chen, B.L., Paniagua, E., Hall, D.H., &amp; Chklovskii, D.B.</span> (2011). Structural properties of the <em>Caenorhabditis elegans</em> neuronal network. <em>PLoS Computational Biology</em>, 7, e1001066.
+  </li>
+  <li>
+    <span class="ref-authors">van Zwol, P., Halvagal, M.S., &amp; Bhatt, K.P.</span> (2024). Predictive coding in cortical neural circuits: theory and biological evidence. <em>arXiv</em>, 2024.09877.
+  </li>
+  <li>
+    <span class="ref-authors">White, J.G., Southgate, E., Thomson, J.N., &amp; Brenner, S.</span> (1986). The structure of the nervous system of the nematode <em>Caenorhabditis elegans</em>. <em>Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences</em>, 314, 1&ndash;340.
+  </li>
+</ol>
+
+</body>
+</html>
