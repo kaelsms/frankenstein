@@ -23,3 +23,9 @@
 - Modi et al. 2020 — mushroom body architecture to algorithm
 - Sadeh & Clopath 2025 — biological intelligence to neural AI
 - Massey et al. 2026 — synaptic homeostasis and sleep
+
+## additional references (added Sept 2026)
+- Green et al. 2017 — neural circuit architecture for angular integration
+- Marder & Taylor 2011 — multiple models for biological variability
+- Kording et al. 2004 — complex cell properties and natural stimuli statistics
+- van Zwol et al. 2024 — predictive coding in cortical circuits
