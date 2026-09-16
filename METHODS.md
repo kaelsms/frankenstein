@@ -45,3 +45,8 @@ dt = 0.5 ms
 4 integration steps per animation frame
 spontaneous activity: 8% chance per frame, random sensory neuron, 15-25 mV
 stimulus pathways: 25-40 mV into target neurons
+
+## spike history
+
+rolling 500 ms window. used for spike rate and ISI calculations.
+activity intensity per neuron: exponential decay (0.95 per step), reset to 1.0 on spike.
