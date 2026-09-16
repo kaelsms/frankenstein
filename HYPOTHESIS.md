@@ -13,3 +13,9 @@ the organizational principles of nervous systems are modular and composable acro
 ## null hypothesis
 
 hybrid activity statistics are a simple superposition of the two parent systems with no emergent properties.
+
+## falsifiability
+
+if experiments 1-4 all show null results (hybrid = superposition), the compositional modularity hypothesis is rejected for this species pair and circuit selection.
+
+if experiment 4 specifically shows no conflict resolution behavior, the bridge layer design is insufficient for cross-species integration at the behavioral level.
