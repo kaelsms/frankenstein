@@ -37,3 +37,9 @@ this reflects the computational overhead of cross-system translation.
 bridge neurons use standard LIF dynamics with worm interneuron defaults:
   threshold: -50 mV
   refractory: 3 ms
+
+## validation
+
+bridge connections tested in isolation before integration.
+each bridge neuron verified to produce expected post-synaptic response.
+delay of 5 ms confirmed sufficient for stable signal propagation.
