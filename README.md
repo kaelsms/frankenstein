@@ -10,7 +10,7 @@
 [![Neurons](https://img.shields.io/badge/neurons-47-blue)](data/neurons.json)
 [![Synapses](https://img.shields.io/badge/synapses-48-blue)](data/synapses.json)
 [![Status](https://img.shields.io/badge/status-in_progress-yellow)](#status)
-[![Paper](https://img.shields.io/badge/paper-proposal-orange)](paper/proposal.html)
+[![Paper](https://img.shields.io/badge/papers-4_reports-orange)](paper/proposal.html)
 
 ---
 
@@ -150,7 +150,13 @@ hybrid001/
 │   ├── run_learning.py      # experiment 3
 │   └── run_conflict.py      # experiment 4
 ├── paper/
-│   └── proposal.html        # academic proposal
+│   ├── proposal.html        # report 1: architecture proposal
+│   ├── paper2.html          # report 2: baseline characterization
+│   ├── paper3.html          # report 3: learning and conflict
+│   └── paper4.html          # report 4: computational scaling
+├── experiments/
+│   ├── run.ts               # visual pipeline runner
+│   └── runner.ts            # headless experiment runner
 └── results/                 # output (generated)
 ```
 
@@ -165,12 +171,12 @@ hybrid001/
 - [x] simulation parameters from electrophysiology
 - [x] paper proposal
 - [x] analysis framework
-- [ ] experiment 1: baseline runs
-- [ ] experiment 2: coherence protocol
-- [ ] experiment 3: learning trials
-- [ ] experiment 4: conflict resolution
-- [ ] statistical analysis
-- [ ] manuscript
+- [x] experiment 1: baseline runs (report 2)
+- [x] experiment 2: coherence protocol (report 2)
+- [x] experiment 3: learning trials (report 3)
+- [x] experiment 4: conflict resolution (report 3)
+- [x] statistical analysis
+- [ ] manuscript (reports 1-4 published, full paper pending)
 
 ---
 
