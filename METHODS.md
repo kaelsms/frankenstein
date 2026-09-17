@@ -50,3 +50,25 @@ stimulus pathways: 25-40 mV into target neurons
 
 rolling 500 ms window. used for spike rate and ISI calculations.
 activity intensity per neuron: exponential decay (0.95 per step), reset to 1.0 on spike.
+
+## hebbian plasticity (experiment 3+)
+
+KC-MBON synapses undergo DAN-gated hebbian update:
+if KC and MBON co-active within 50 ms window during DAN2 firing:
+  weight += 0.05 (additive, capped at 2x baseline)
+
+follows Hige et al. 2015 heterosynaptic plasticity model.
+selective strengthening: only KCs active during reward delivery are modified.
+
+## scaling parameters (report 4)
+
+tier 0 (current): 47 neurons, ~200 synapses, instantaneous current
+tier 1 (expanded): 312 neurons, ~4800 synapses, exponential conductances
+tier 2: 2232 neurons, ~180k synapses, dual-exponential + STP
+tier 3: 10366 neurons, ~2M synapses, full short-term plasticity
+tier 4: 50430 neurons, ~25M synapses, GPU-accelerated batch
+
+exponential synapse model (tier 1+):
+  I_syn(t) = w * exp(-(t - t_spike) / tau_syn)
+  tau_syn = 5-20 ms (excitatory: 5 ms, inhibitory: 10 ms)
+  enables temporal summation and coincidence detection
